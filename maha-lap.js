@@ -22,7 +22,7 @@ class MahaLap {
       case "คริสมาสต์":
         return 25;
       default:
-        return "Not Match";
+        return 99;
     }
   }
 
@@ -40,7 +40,7 @@ class MahaLap {
       case 66:
         return sum;
       default:
-        "Not Match";
+        return 99;
     }
   }
 
@@ -60,6 +60,12 @@ class MahaLap {
         return randomNumber;
       }
     }
+  }
+  static namo(day, story, time) {
+    const resultDay = this.tamnaiWithDay(day);
+    const resultStory = this.tamnaiWithStory(story);
+    const resultTime = this.tamnaiWithTime(time);
+    return (resultDay * resultStory * resultTime * 100) % 1000;
   }
 }
 
