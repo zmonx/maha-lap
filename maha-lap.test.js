@@ -64,4 +64,24 @@ describe("Test Maha-Lap", () => {
     const result = MahaLap.tamnaiWithStory("Cat and Dog");
     expect(result).toEqual(66);
   });
+  test("Test Tamnai with time กลางวัน ramdom = 98 return 98", () => {
+    global.Math.random = jest.fn(() => 0.98);
+    const result = MahaLap.tamnaiWithTime("กลางวัน");
+    expect(result).toEqual(0.98);
+  });
+  test("Test Tamnai with time กลางวัน ramdom = 0.4 return 0.5", () => {
+    global.Math.random = jest.fn(() => 0.4);
+    const result = MahaLap.tamnaiWithTime("กลางวัน");
+    expect(result).toEqual(0.5);
+  });
+  test("Test Tamnai with time กลางคืน ramdom = 0. return 0.4", () => {
+    global.Math.random = jest.fn(() => 0.4);
+    const result = MahaLap.tamnaiWithTime("กลางคืน");
+    expect(result).toEqual(0.4);
+  });
+  test("Test Tamnai with time กลางคืน ramdom = 0.64 return 0.5", () => {
+    global.Math.random = jest.fn(() => 0.64);
+    const result = MahaLap.tamnaiWithTime("กลางคืน");
+    expect(result).toEqual(0.5);
+  });
 });
